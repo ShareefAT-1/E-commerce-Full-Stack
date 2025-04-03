@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axiosbase from "../config/axios-config";
+import { toast } from "react-hot-toast";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -19,25 +20,25 @@ const Login = () => {
     e.preventDefault();
 
     if (!formData.email || !formData.password) {
-      alert("Please fill in all fields!");
+      toast.error("Please fill in all fields!");
       return;
     }
 
     try {
       await axiosbase.post("/login", formData);
-      alert("Login Successful!");
+      toast.success("Login Successful!");
       setFormData({
         email: "",
         password: "",
       });
     } catch (error) {
       console.error("Login failed:", error);
-      alert("Login Failed!");
+      toast.error("Login Failed!");
     }
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-black">
+    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-black via-gray-900 to-purple-900">
       <div className="bg-gray-900 bg-opacity-60 backdrop-blur-md p-8 rounded-xl shadow-lg w-full max-w-md border border-gray-700">
         <h2 className="text-2xl font-bold text-center text-gray-300 mb-4">
           Login to Your Account
@@ -95,9 +96,15 @@ const Login = () => {
           Don't have an account?{" "}
           <a
             href="/register"
-            className="text-purple-400 font-medium hover:underline"
+            className="text-purple-400 font-medium hover:underline ml-3"
           >
             Register
+          </a>
+          <a
+            href="/upload"
+            className="text-purple-400 font-medium hover:underline "
+          >
+            Upload a file
           </a>
         </p>
       </div>

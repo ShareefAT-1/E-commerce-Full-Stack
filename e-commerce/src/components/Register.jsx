@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axiosbase from "../config/axios-config";
+import { toast } from "react-hot-toast";
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -26,27 +27,27 @@ const Register = () => {
       !formData.password ||
       !formData.phone
     ) {
-      alert("Please fill in all fields!");
+      toast.error("Please fill in all fields!");
       return;
     }
 
     try {
       await axiosbase.post("/register", formData);
-      alert("Registration Successful!");
+      toast.success("Registration Successful!");
       setFormData({
-    username: "",
-    email: "",
-    password: "",
-    phone: "",
-  });
+        username: "",
+        email: "",
+        password: "",
+        phone: "",
+      });
     } catch (error) {
       console.error("Registration failed:", error);
-      alert("Registration Failed!");
+      toast.error("Registration Failed!");
     }
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-black">
+    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       <div className="bg-gray-900 bg-opacity-60 backdrop-blur-md p-8 rounded-xl shadow-lg w-full max-w-md border border-gray-700">
         <h2 className="text-2xl font-bold text-center text-gray-300 mb-4">
           Create an Account
@@ -122,11 +123,8 @@ const Register = () => {
         </form>
 
         <p className="text-center text-gray-400 mt-4 text-sm">
-          Alreedy have an account?{" "}
-          <a
-            href="/login"
-            className="text-blue-400 font-medium hover:underline"
-          >
+          Already have an account?{" "}
+          <a href="/login" className="text-blue-400 font-medium hover:underline">
             Login
           </a>
         </p>
