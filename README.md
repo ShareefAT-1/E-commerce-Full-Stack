@@ -1,6 +1,6 @@
-# 📸 Image Upload & Authentication App
+# 🛍️ Velocia – Full-Stack E-commerce Web Application
 
-A modern full-stack web application built with the **MERN** stack (MongoDB, Express, React, Node.js) that allows users to register, login, and upload images securely.
+A modern full-stack e-commerce application built with the **MERN** stack (MongoDB, Express, React, Node.js) that allows users to register, login, browse products, and place orders securely. Includes features like dynamic routing, protected pages, responsive UI with Tailwind CSS, and deployment on Vercel (frontend) and Render (backend).
 
 ---
 
