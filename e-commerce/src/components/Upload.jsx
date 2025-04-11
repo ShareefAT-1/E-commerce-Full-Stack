@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import axiosbase from "../config/axios-config";
 
-const Upload = () => {
+const Upload = () => {  
   const [file, setFile] = useState();
 
   const handleUpload = (e) => {
     e.preventDefault();
-    const formData = new FormData();
+    const formData = new FormData();  
     formData.append("file", file);
     axiosbase
       .post("/products/upload", formData)
