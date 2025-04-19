@@ -38,21 +38,21 @@ const Landing = () => {
           </Link>
         </div>
 
-        <div className="flex-1 relative w-[200px] h-[300px]">
+        <div className="flex-1 relative w-[300px] h-[400px]">
           <img
             src={img3}
             alt="stack1"
-            className="absolute w-[180px] h-[260px] object-cover rounded-lg shadow-lg z-30 rotate-[-5deg] top-0 left-0"
+            className="absolute w-[280px] h-[360px] object-cover rounded-lg shadow-lg z-30 rotate-[-5deg] top-0 left-0"
           />
           <img
             src={img6}
             alt="stack2"
-            className="absolute w-[180px] h-[260px] object-cover rounded-lg shadow-lg z-20 rotate-0 top-5 left-2"
+            className="absolute w-[280px] h-[360px] object-cover rounded-lg shadow-lg z-20 rotate-0 top-5 left-2"
           />
           <img
             src={img8}
             alt="stack3"
-            className="absolute w-[180px] h-[260px] object-cover rounded-lg shadow-lg z-10 rotate-[5deg] top-10 left-5"
+            className="absolute w-[280px] h-[360px] object-cover rounded-lg shadow-lg z-10 rotate-[5deg] top-10 left-5"
           />
         </div>
 

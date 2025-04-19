@@ -79,3 +79,4 @@ const Classic = () => {
 };
 
 export default Classic;
+
