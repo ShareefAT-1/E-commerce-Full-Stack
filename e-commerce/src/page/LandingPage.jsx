@@ -64,12 +64,12 @@ const Landing = () => {
 
       <div className="flex flex-col md:flex-row justify-center items-center gap-5 py-10 px-5">
         <div className="w-[300px] h-[400px] overflow-hidden rounded-lg">
-          <Link to="/products/bold">
+          <Link to="/products/formal">
             <img src={img4} alt="suit2" className="w-full h-full object-cover" />
           </Link>
         </div>
         <div className="w-[300px] h-[400px] overflow-hidden rounded-lg">
-          <Link to="/products/formal">
+          <Link to="/products/bold">
             <img src={img6} alt="suit3" className="w-full h-full object-cover" />
           </Link>
         </div>

@@ -8,10 +8,11 @@ import LandingPage from "./page/LandingPage";
 import Classic from "./page/Classic";
 import Bold from "./page/Bold";
 import Formal from "./page/Formal";
+import Products from "./page/Products";
+
 
 function App() {
   return (
-    
     <div>
       <Toaster position="top-right" />
       <Routes>
@@ -20,8 +21,9 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/upload" element={<Upload />} />
         <Route path="/products/classic" element={<Classic />} />
-        <Route path="/products/formal" element={<Bold/>} />
-        <Route path="/products/bold" element={<Formal/>} />
+        <Route path="/products/formal" element={<Formal />} />
+        <Route path="/products/bold" element={<Bold />} />    
+        <Route path="/all/products" element={<Products />} />
       </Routes>
     </div>
   );
